@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://us008fdxpimy"]
 
-[ext_resource type="Script" path="res://MainMenu/MainMenuGUI.gd" id="1_f7ol6"]
+[ext_resource type="Script" path="res://MainMenu/main_menu_gui.gd" id="1_cr7ka"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x1a83"]
 font_size = 40
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_f7ol6")
+script = ExtResource("1_cr7ka")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1

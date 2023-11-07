@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://qmnnl87jasm1"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_h8xjl"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_pg8q4"]
 [ext_resource type="Texture2D" uid="uid://b8dsggt1ncvfn" path="res://icon.svg" id="2_jm55k"]
 [ext_resource type="PackedScene" uid="uid://br08o74mo3s2p" path="res://Component/Dash/dash_component.tscn" id="3_0g52r"]
 [ext_resource type="PackedScene" uid="uid://cr0pagq4uhfa8" path="res://Component/Health/health_component.tscn" id="4_8r6up"]
@@ -39,7 +39,7 @@ border_color = Color(0, 0, 0, 0)
 border_blend = true
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_h8xjl")
+script = ExtResource("1_pg8q4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rj8qo")
@@ -76,3 +76,5 @@ grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_8lkfp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ofajt")
 show_percentage = false
+
+[connection signal="death" from="HealthComponent" to="." method="_on_health_component_death"]

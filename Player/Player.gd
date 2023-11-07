@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
+signal death
 
 const speed = 300.0
 
-var dash_component = null
+@onready var dash_component = $DashComponent
 
 func _ready():
-	dash_component = $DashComponent
+	pass
 
 func _physics_process(delta):
 	var current_speed = speed
@@ -27,3 +28,6 @@ func _physics_process(delta):
 	
 	position += velocity * delta
 
+
+func _on_health_component_death():
+	death.emit()

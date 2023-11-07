@@ -7,7 +7,7 @@ extends Node
 @export var regeneration_in_hp_per_sec = 0.25
 var regeneration_buffer :float
 
-@onready var health_bar = get_parent().get_node("HUD/HealthBar")
+@onready var health_bar = self.get_parent().get_node("HUD/HealthBar")
 
 signal death
 
